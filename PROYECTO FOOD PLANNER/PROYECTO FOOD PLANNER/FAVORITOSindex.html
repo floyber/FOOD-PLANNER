@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos - FoodPlaner</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Fondo circular --%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff6b35'/%3E%3C!-- Plato --%3E%3Ccircle cx='50' cy='55' r='35' fill='%23fff'/%3E%3C!-- Lomo saltado como masa colorida --%3E%3Cellipse cx='50' cy='50' rx='25' ry='20' fill='%23D2691E'/%3E%3Cellipse cx='45' cy='48' rx='8' ry='6' fill='%23A0522D'/%3E%3Cellipse cx='58' cy='52' rx='7' ry='5' fill='%23CD853F'/%3E%3Cellipse cx='48' cy='58' rx='6' ry='4' fill='%23B8860B'/%3E%3C/svg%3E">
+    <!-- Enlaces a CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="FAVORITOS.css">
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Recetas Favoritas</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="INICIOindex.html">Inicio</a></li>
+            <li><a href="RECETAindex.html">Catálogo de Recetas</a></li>
+            <li><a href="CALENDARIOindex.html">Calendario</a></li>
+            <li><a href="LISTACOMPRASindex.html">Lista de Compras</a></li>
+            <li><a href="FAVORITOSindex.html" class="active">Favoritos</a></li>
+            <li><a href="REGISTROindex.html">Registro</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <!-- Indicador de carga -->
+        <div id="cargando" class="mensaje-vacio">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Cargando tus recetas favoritas...</p>
+        </div>
+        
+        <div id="favoritos-container" class="favoritos-grid">
+            <!-- El contenido de favoritos se cargará dinámicamente mediante JavaScript -->
+        </div>
+        
+        <div id="mensaje-vacio" class="mensaje-vacio">
+            <h3>No tienes recetas favoritas guardadas</h3>
+            <p>Explora el catálogo de recetas y agrega tus favoritas</p>
+            <a href="RECETAindex.html" class="btn btn-primary">
+                <i class="fas fa-search"></i> Explorar recetas
+            </a>
+        </div>
+        
+        <!-- Contenedor para mensajes de error -->
+        <div id="error-container" class="mensaje-vacio error-mensaje">
+            <h3><i class="fas fa-exclamation-triangle"></i> Ocurrió un problema</h3>
+            <p id="error-mensaje">Hubo un error al cargar tus recetas favoritas</p>
+            <button id="btn-reintentar" class="btn btn-primary">
+                <i class="fas fa-sync"></i> Reintentar
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 FoodPlaner - Tu planificador de comidas</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- Script para verificación inicial -->
+    <script>
+        // Este script se ejecuta para verificar que todo esté listo antes de cargar el contenido principal
+        console.log("Inicializando página de favoritos...");
+        
+        // Evento para el botón de reintentar
+        document.addEventListener('DOMContentLoaded', function() {
+            const btnReintentar = document.getElementById('btn-reintentar');
+            if (btnReintentar) {
+                btnReintentar.addEventListener('click', function() {
+                    window.location.reload();
+                });
+            }
+        });
+    </script>
+
+    <!-- Enlace al archivo JavaScript principal -->
+    <script src="FAVORITOS.js"></script>
+</body>
+</html>

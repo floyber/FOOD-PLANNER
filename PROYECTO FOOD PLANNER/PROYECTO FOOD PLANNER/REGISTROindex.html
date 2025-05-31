@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - FoodPlaner</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Fondo circular --%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff6b35'/%3E%3C!-- Plato --%3E%3Ccircle cx='50' cy='55' r='35' fill='%23fff'/%3E%3C!-- Lomo saltado como masa colorida --%3E%3Cellipse cx='50' cy='50' rx='25' ry='20' fill='%23D2691E'/%3E%3Cellipse cx='45' cy='48' rx='8' ry='6' fill='%23A0522D'/%3E%3Cellipse cx='58' cy='52' rx='7' ry='5' fill='%23CD853F'/%3E%3Cellipse cx='48' cy='58' rx='6' ry='4' fill='%23B8860B'/%3E%3C/svg%3E">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styleREGISTRO.css">
+</head>
+<body>
+    <div class="container">
+        <div class="registro-container">
+            <div class="logo">
+                <h1>FoodPlaner</h1>
+                <p>Planifica tus comidas de manera saludable</p>
+            </div>
+
+            <form id="registroForm">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                    <div class="error-message" id="nombreError">Por favor ingresa tu nombre completo</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="error-message" id="emailError">Por favor ingresa un correo electrónico válido</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" required>
+                    <div class="error-message" id="passwordError">La contraseña debe tener al menos 8 caracteres</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                    <div class="error-message" id="confirmPasswordError">Las contraseñas no coinciden</div>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="terminos" required>
+                    <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+                    <div class="error-message" id="terminosError">Debes aceptar los términos y condiciones</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+
+                <div class="mt-3 text-center">
+                    <p>¿Ya tienes una cuenta? <a href="INICIOindex.html">Iniciar sesión</a></p>
+                </div>
+
+                <div class="success-message mt-3 text-center" id="registroExitoso">
+                    ¡Registro exitoso! Redirigiendo al inicio de sesión...
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="REGISTRO.js"></script>
+</body>
+</html>

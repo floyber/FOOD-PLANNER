@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.header-title {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-title h1 {
+    margin: 0;
+}
+
+.header-title p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.main-nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.main-nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    background-color: #555;
+}
+
+.main-nav a.active {
+    background-color: #4CAF50;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.filters {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filters button.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.add-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.add-item input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+.add-item select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-left: none;
+}
+
+.add-item button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.items-list {
+    list-style-type: none;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.item span {
+    flex: 1;
+}
+
+.item .category {
+    background-color: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+.item .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-left: 5px;
+}
+
+.delete-btn {
+    color: #e74c3c;
+}
+
+.check-btn {
+    color: #2ecc71;
+}
+
+.item.checked {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.clear-all {
+    padding: 8px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Para dispositivos móviles también mantener la navegación inferior */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.bottom-nav i {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.bottom-nav a.active {
+    color: #4CAF50;
+}
+
+/* Media query para ocultar la navegación inferior en pantallas más grandes */
+@media (min-width: 768px) {
+    .bottom-nav {
+        display: none;
+    }
+}

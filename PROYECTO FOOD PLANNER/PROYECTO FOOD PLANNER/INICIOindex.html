@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Planner - Inicio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Fondo circular --%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff6b35'/%3E%3C!-- Plato --%3E%3Ccircle cx='50' cy='55' r='35' fill='%23fff'/%3E%3C!-- Lomo saltado como masa colorida --%3E%3Cellipse cx='50' cy='50' rx='25' ry='20' fill='%23D2691E'/%3E%3Cellipse cx='45' cy='48' rx='8' ry='6' fill='%23A0522D'/%3E%3Cellipse cx='58' cy='52' rx='7' ry='5' fill='%23CD853F'/%3E%3Cellipse cx='48' cy='58' rx='6' ry='4' fill='%23B8860B'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="INICIO.css">
+    <script src="INICIO.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Food Planner</h1>
+            <p>Tu asistente de planificación de comidas</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="INICIOindex.html">Inicio</a></li>
+                <li><a href="CALENDARIOindex.html">Calendario</a></li>
+                <li><a href="RECETAindex.html">Recetas</a></li>
+                <li><a href="LISTACOMPRASindex.html">Lista de Compras</a></li>
+                <li><a href="FAVORITOSindex.html">Favoritos</a></li>
+                <li><a href="#" id="login-btn">Iniciar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Planifica tus comidas de manera eficiente</h1>
+                <p>Organiza tus comidas semanales, crea listas de compras automáticas y descubre nuevas recetas.</p>
+                <a href="REGISTROindex.html" class="btn">Regístrate Gratis</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-box" data-feature="calendario">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Calendario de Comidas</h3>
+                <p>Organiza tus comidas diarias y semanales en un calendario intuitivo. Planifica con anticipación y nunca más te preguntes qué cocinar.</p>
+            </div>
+            <div class="feature-box" data-feature="recetas">
+                <i class="fas fa-utensils"></i>
+                <h3>Recetas Deliciosas</h3>
+                <p>Accede a cientos de recetas saludables y deliciosas. Filtra por ingredientes, tiempo de preparación o preferencias dietéticas.</p>
+            </div>
+            <div class="feature-box" data-feature="compras">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Lista de Compras Automática</h3>
+                <p>Genera automáticamente tu lista de compras basada en tu plan de comidas semanal. Ahorra tiempo y dinero evitando compras innecesarias.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal de Inicio de Sesión -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn">Iniciar Sesión</button>
+                <div class="form-footer">
+                    <p>¿No tienes una cuenta? <a href="REGISTROindex.html">Regístrate aquí</a></p>
+                    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Food Planner. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

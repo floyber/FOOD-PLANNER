@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodPlaner - Calendario de Comidas</title>
+    <link rel="stylesheet" href="CALENDARIO.css">
+</head>
+<body>
+    <header>
+        <h1>FoodPlaner-Calendario</h1>
+        <p>Tu planificador de comidas semanal</p>
+    </header>
+    
+    <nav>
+        <a href="INICIOindex.html">Inicio</a>
+        <a href="CALENDARIOindex.html" class="active">Calendario</a>
+        <a href="RECETAindex.html">Catálogo de Recetas</a>
+        <a href="LISTACOMPRASindex.html">Lista de Compras</a>
+        <a href="favoritosindex.html">Favoritos</a>
+    </nav>
+    
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <div class="month-selector">
+                <button id="prev-month">&lt;</button>
+                <h2 id="current-month">Mayo 2025</h2>
+                <button id="next-month">&gt;</button>
+            </div>
+            <div>
+                <button id="view-shopping-list">Ver lista de compras</button>
+            </div>
+        </div>
+        
+        <table class="calendar" id="calendar-table">
+            <thead>
+                <tr>
+                    <th>Domingo</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sábado</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+            
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <div id="meal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Añadir comida</h2>
+            <form id="add-meal-form">
+                <input type="hidden" id="meal-date" name="date">
+                
+                <label for="meal-type">Tipo de comida:</label>
+                <select id="meal-type" name="mealType" required>
+                    <option value="desayuno">Desayuno</option>
+                    <option value="almuerzo">Almuerzo</option>
+                    <option value="cena">Cena</option>
+                    <option value="merienda">Merienda</option>
+                </select>
+                
+                <label for="meal-name">Nombre de la comida:</label>
+                <input type="text" id="meal-name" name="mealName" required>
+                
+                <label for="meal-ingredients">Ingredientes:</label>
+                <textarea id="meal-ingredients" name="ingredients" rows="4" placeholder="Ingrediente 1, Ingrediente 2, ..."></textarea>
+                
+                <label for="meal-notes">Notas adicionales:</label>
+                <textarea id="meal-notes" name="notes" rows="2"></textarea>
+                
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Vincular los archivos JavaScript y CSS -->
+    <script src="CALENDARIO.js"></script>
+</body>
+</html>

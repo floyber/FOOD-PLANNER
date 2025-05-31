@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras - FoodPlaner</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Fondo circular --%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff6b35'/%3E%3C!-- Plato --%3E%3Ccircle cx='50' cy='55' r='35' fill='%23fff'/%3E%3C!-- Lomo saltado como masa colorida --%3E%3Cellipse cx='50' cy='50' rx='25' ry='20' fill='%23D2691E'/%3E%3Cellipse cx='45' cy='48' rx='8' ry='6' fill='%23A0522D'/%3E%3Cellipse cx='58' cy='52' rx='7' ry='5' fill='%23CD853F'/%3E%3Cellipse cx='48' cy='58' rx='6' ry='4' fill='%23B8860B'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Vinculando la hoja de estilos CSS separada -->
+    <link rel="stylesheet" href="LISTADECOMPRAS.css">
+</head>
+<body>
+    <div class="header-title">
+        <h1>FoodPlaner-Compras</h1>
+        <p>Tu planificador de comidas semanal</p>
+    </div>
+    
+    <div class="main-nav">
+        <a href="INICIOindex.html">Inicio</a>
+        <a href="CALENDARIOindex.html">Calendario</a>
+        <a href="RECETAindex.html">Catálogo de Recetas</a>
+        <a href="LISTACOMPRASindex.html" class="active">Lista de Compras</a>
+        <a href="favoritosindex.html">Favoritos</a>
+    </div>
+    
+    <div class="container">
+        <div class="filters">
+            <button id="all-filter" class="active">Todos</button>
+            <button id="pending-filter">Pendientes</button>
+            <button id="completed-filter">Completados</button>
+        </div>
+        
+        <div class="add-item">
+            <input type="text" id="new-item" placeholder="Añadir producto...">
+            <select id="category">
+                <option value="frutas">Frutas</option>
+                <option value="verduras">Verduras</option>
+                <option value="carnes">Carnes</option>
+                <option value="lacteos">Lácteos</option>
+                <option value="cereales">Cereales</option>
+                <option value="congelados">Congelados</option>
+                <option value="limpieza">Limpieza</option>
+                <option value="otros">Otros</option>
+            </select>
+            <button id="add-btn">Añadir</button>
+        </div>
+        
+        <ul class="items-list" id="shopping-list">
+            <!-- Lista de items se generará dinámicamente -->
+        </ul>
+        
+        <button class="clear-all" id="clear-all">Limpiar Lista</button>
+    </div>
+    
+    <!-- Navegación inferior para móviles -->
+    <div class="bottom-nav">
+        <a href="INICIOindex.html">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="RECETAindex.html">
+            <i class="fas fa-book"></i>
+            <span>Recetas</span>
+        </a>
+        <a href="CALENDARIOindex.html">
+            <i class="fas fa-calendar"></i>
+            <span>Calendario</span>
+        </a>
+        <a href="LISTACOMPRASindex.html" class="active">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Compras</span>
+        </a>
+        <a href="favoritosindex.html">
+            <i class="fas fa-heart"></i>
+            <span>Favoritos</span>
+        </a>
+    </div>
+    
+    <script src="LISTACOMPRAS.js"></script>
+</body>
+</html>
